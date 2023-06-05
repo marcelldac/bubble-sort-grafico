@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #4f4f4f;
+  --secondary-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.App {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin-left: 10px;
+  margin-top: 40px;
+  height: 2vh;
+  width: 3vw;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.label {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 100px;
+}
+
+.input {
+  margin-left: 90vh;
+  color: var(--secondary-color);
+  width: 100%;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+}
+
+.button {
+  margin-left: 80vh;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
