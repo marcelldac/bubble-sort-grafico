@@ -1,8 +1,8 @@
-# Iniciar com os seguintes comandos: 
+# Follow the commands bellow: 
 
 `npm install` && `npm run dev`
 
-## Autor:
+## Author:
 
 - [@marcelldac](https://github.com/marcelldac)
 
