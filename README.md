@@ -1,8 +1,20 @@
-# Follow the commands bellow: 
+# Bubble Sort com UI feito em React.js
 
-`npm install` && `npm run dev`
+# Para ver o projeto:
 
-## Author:
+- Passo 1: Instalar as dependencias:
+
+```
+npm install
+```
+
+- Passo 2: Executar:
+
+```
+npm run dev
+```
+
+## Autor:
 
 - [@marcelldac](https://github.com/marcelldac)
 
