@@ -1,20 +1,16 @@
-# Bubble Sort com UI feito em React.js
+# Bubble Sort with a UI implemented in React.js.
+See the project:
 
-# Para ver o projeto:
-
-- Passo 1: Instalar as dependencias:
-
+- Step 1: Install the dependencies, please:
 ```
 npm install
 ```
 
-- Passo 2: Executar:
-
+- Step 2: Execute:
 ```
 npm run dev
 ```
-
-## Autor:
+## Author:
 
 - [@marcelldac](https://github.com/marcelldac)
 
