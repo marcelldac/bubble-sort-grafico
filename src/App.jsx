@@ -1,60 +1,67 @@
 import { useState, useEffect, useRef } from "react";
 
-const content = {
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  alignItems: 'center',
-  marginTop: 250,
-}
-
-const span = {
-  display: 'flex',
-  justifyContent: 'center',
-  backgroundColor: '#fff',
-  fontFamily: 'monospace',
-  marginBottom: 10,
-  paddingTop: 25,
-  width: 200,
-  height: 50,
-  borderRadius: 50,
-  fontSize: 20,
-}
-
-const input = {
-  textAlign: 'center',
-  border: 'none',
-  width: 200,
-  height: 60,
-  borderRadius: 50,
-  marginBottom: 10,
-}
-
-const button = {
-  textAlign: 'center',
-  border: 'none',
-  width: 200,
-  height: 70,
-  borderRadius: 50,
-  marginBottom: 10,
-}
-
-const mapParent = {
-  textAlign: "center",
-  marginTop:100,
-}
-
-const result = {
-  color: '#fff',
-}
 function App() {
+  
   var [array, setArray] = useState([]);
   var [sortHistory, setSortHistory] = useState([[...array]]);
   var [looping, setLooping] = useState(0);
-  const [playing, setPlaying] = useState(false);
   var size = array.length;
+
+  const [playing, setPlaying] = useState(false);
+  const [isHover, setIsHover] = useState(false);
   const timeoutRef = useRef();
-  console.log(array, sortHistory);
+
+  const content = {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: 250,
+  }
+  
+  const span = {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    fontFamily: 'monospace',
+    textAlign: 'center',
+    marginBottom: 10,
+    padding: 25,
+    width: 250,
+    height: 100,
+    borderRadius: 50,
+    fontSize: 20,
+  }
+  
+  const input = {
+    textAlign: 'center',
+    border: 'none',
+    width: 250,
+    height: 60,
+    borderRadius: 50,
+    marginBottom: 10,
+  }
+  
+  const button = {
+    textAlign: 'center',
+    border: 'none',
+    cursor:'pointer',
+    width: 250,
+    height: 70,
+    borderRadius: 50,
+    marginBottom: 10,
+    backgroundColor: isHover ? 'gray' : '#fff'
+  }
+  
+  const mapParent = {
+    textAlign: "center",
+    marginTop:100,
+  }
+  
+  const result = {
+    color: '#fff',
+  }
+
   useEffect(() => {
     setArray(sortHistory[looping]);
   }, [looping, sortHistory]);
@@ -98,9 +105,9 @@ function App() {
   return (
     <div>
       <div style={content}>
-        <span style={span}>Type some number</span>
+        <span style={span}>Type an array following the example. Separate with comma. Ex.: 3,2,1</span>
         <input style={input} type="text" onChange={handleChange}/>
-        <button style={button} onClick={bubblesort}>Bubble Sort!</button>
+        <button style={button} onClick={bubblesort} onMouseEnter={() => {setIsHover(true)}} onMouseLeave={() => {setIsHover(false)}}>Bubble Sort!</button>
       </div>
       <div style={mapParent}>
         {array.map((element) => (
